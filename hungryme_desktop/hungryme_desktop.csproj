@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EE23FA5-C071-4268-9003-D837026EA0D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>hungryme_desktop</RootNamespace>
+    <AssemblyName>hungryme_desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\References\MySql dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>..\..\References\MySql dll\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerCare_Forms\ContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerCare_Forms\ContactUs.Designer.cs">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCare_Forms\Waiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerCare_Forms\Waiter.Designer.cs">
+      <DependentUpon>Waiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Forms\CustomerCare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Forms\CustomerCare.Designer.cs">
+      <DependentUpon>CustomerCare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Forms\Meals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Forms\Meals.Designer.cs">
+      <DependentUpon>Meals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Forms\MyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Forms\MyAccount.Designer.cs">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Forms\MyCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Forms\MyCart.Designer.cs">
+      <DependentUpon>MyCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Salads.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Salads.Designer.cs">
+      <DependentUpon>Salads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Salad_Special.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Salad_Special.Designer.cs">
+      <DependentUpon>Salad_Special.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Salad_Vegetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Salad_Vegetable.Designer.cs">
+      <DependentUpon>Salad_Vegetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soups.Designer.cs">
+      <DependentUpon>Soups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Chiicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Chiicken.Designer.cs">
+      <DependentUpon>Soup_Chiicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Garlic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Garlic.Designer.cs">
+      <DependentUpon>Soup_Garlic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Tomato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Tomato.Designer.cs">
+      <DependentUpon>Soup_Tomato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Vegetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Soup_Vegetable.Designer.cs">
+      <DependentUpon>Soup_Vegetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\Beverages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\Beverages.Designer.cs">
+      <DependentUpon>Beverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\Coffee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\Coffee.Designer.cs">
+      <DependentUpon>Coffee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\MilkShake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\MilkShake.Designer.cs">
+      <DependentUpon>MilkShake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\SoftDrinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\SoftDrinks.Designer.cs">
+      <DependentUpon>SoftDrinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\Tea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Beverages_Forms\Tea.Designer.cs">
+      <DependentUpon>Tea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\BAHD_Burgers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\BAHD_Burgers.Designer.cs">
+      <DependentUpon>BAHD_Burgers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burgers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burgers.Designer.cs">
+      <DependentUpon>Burgers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Cheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Cheese.Designer.cs">
+      <DependentUpon>Burger_Cheese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Chicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Chicken.Designer.cs">
+      <DependentUpon>Burger_Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Cheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Cheese.Designer.cs">
+      <DependentUpon>HotDog_Cheese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Fish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Fish.Designer.cs">
+      <DependentUpon>HotDog_Fish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Spicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Spicy.Designer.cs">
+      <DependentUpon>HotDog_Spicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Fish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Fish.Designer.cs">
+      <DependentUpon>Burger_Fish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\BAHD_HotDogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\BAHD_HotDogs.Designer.cs">
+      <DependentUpon>BAHD_HotDogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\HotDogs.Designer.cs">
+      <DependentUpon>HotDogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\Desserts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\Desserts.Designer.cs">
+      <DependentUpon>Desserts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\FruitSalad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\FruitSalad.Designer.cs">
+      <DependentUpon>FruitSalad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\IceCream.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\IceCream.Designer.cs">
+      <DependentUpon>IceCream.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\Mouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\Mouse.Designer.cs">
+      <DependentUpon>Mouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\Pudding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Desserts_Forms\Pudding.Designer.cs">
+      <DependentUpon>Pudding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels.Designer.cs">
+      <DependentUpon>Noodels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_Cheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_Cheese.Designer.cs">
+      <DependentUpon>Noodels_Cheese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_Chicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_Chicken.Designer.cs">
+      <DependentUpon>Noodels_Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_Veg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_Veg.Designer.cs">
+      <DependentUpon>Noodels_Veg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_SeaFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Noodels_Forms\Noodels_SeaFood.Designer.cs">
+      <DependentUpon>Noodels_SeaFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaronis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaronis.Designer.cs">
+      <DependentUpon>Macaronis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\PAM_Macaronis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\PAM_Macaronis.Designer.cs">
+      <DependentUpon>PAM_Macaronis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_Cheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_Cheese.Designer.cs">
+      <DependentUpon>Macaroni_Cheese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_Chicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_Chicken.Designer.cs">
+      <DependentUpon>Macaroni_Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_SeaFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_SeaFood.Designer.cs">
+      <DependentUpon>Macaroni_SeaFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\PAM_Pastas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\PAM_Pastas.Designer.cs">
+      <DependentUpon>PAM_Pastas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pastas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pastas.Designer.cs">
+      <DependentUpon>Pastas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\PastasAndMacaronis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\PastasAndMacaronis.Designer.cs">
+      <DependentUpon>PastasAndMacaronis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_Cheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_Cheese.Designer.cs">
+      <DependentUpon>Pasta_Cheese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_Chicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_Chicken.Designer.cs">
+      <DependentUpon>Pasta_Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_SeaFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_SeaFood.Designer.cs">
+      <DependentUpon>Pasta_SeaFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Cheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Cheese.Designer.cs">
+      <DependentUpon>Pizza_Cheese.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Chicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Chicken.Designer.cs">
+      <DependentUpon>Pizza_Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Spicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Spicy.Designer.cs">
+      <DependentUpon>Pizza_Spicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Veg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizza_Veg.Designer.cs">
+      <DependentUpon>Pizza_Veg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rices.Designer.cs">
+      <DependentUpon>Rices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rice_Chicken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rice_Chicken.Designer.cs">
+      <DependentUpon>Rice_Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rice_SeaFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rice_SeaFood.Designer.cs">
+      <DependentUpon>Rice_SeaFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rice_Veg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Rices_Forms\Rice_Veg.Designer.cs">
+      <DependentUpon>Rice_Veg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount_Forms\CreateAnAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount_Forms\CreateAnAccount.Designer.cs">
+      <DependentUpon>CreateAnAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount_Forms\MyLogedAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount_Forms\MyLogedAccount.Designer.cs">
+      <DependentUpon>MyLogedAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount_Forms\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount_Forms\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount_Forms\OTPSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount_Forms\OTPSMS.Designer.cs">
+      <DependentUpon>OTPSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCart_Forms\AddToCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCart_Forms\AddToCart.Designer.cs">
+      <DependentUpon>AddToCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCart_Forms\AlreadyAdded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCart_Forms\AlreadyAdded.Designer.cs">
+      <DependentUpon>AlreadyAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCart_Forms\SelectToDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCart_Forms\SelectToDelete.Designer.cs">
+      <DependentUpon>SelectToDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Meals_Forms\Appetizers_Forms\Appatizers_Salads.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Appatizers_Salads.Designer.cs">
+      <DependentUpon>Appatizers_Salads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Appatizers_Soup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Appatizers_Soup.Designer.cs">
+      <DependentUpon>Appatizers_Soup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Appetizers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Appetizers_Forms\Appetizers.Designer.cs">
+      <DependentUpon>Appetizers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\BurgersandHotDogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\BurgersandHotDogs_Forms\BurgersandHotDogs.Designer.cs">
+      <DependentUpon>BurgersandHotDogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meals_Forms\Pizzas_Forms\Pizzas.Designer.cs">
+      <DependentUpon>Pizzas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomerCare_Forms\ContactUs.resx">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerCare_Forms\Waiter.resx">
+      <DependentUpon>Waiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Forms\CustomerCare.resx">
+      <DependentUpon>CustomerCare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Forms\Meals.resx">
+      <DependentUpon>Meals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Forms\MyAccount.resx">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Forms\MyCart.resx">
+      <DependentUpon>MyCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Salads.resx">
+      <DependentUpon>Salads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Salad_Special.resx">
+      <DependentUpon>Salad_Special.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Salad_Vegetable.resx">
+      <DependentUpon>Salad_Vegetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Soups.resx">
+      <DependentUpon>Soups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Soup_Chiicken.resx">
+      <DependentUpon>Soup_Chiicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Soup_Garlic.resx">
+      <DependentUpon>Soup_Garlic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Soup_Tomato.resx">
+      <DependentUpon>Soup_Tomato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Soup_Vegetable.resx">
+      <DependentUpon>Soup_Vegetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Beverages_Forms\Beverages.resx">
+      <DependentUpon>Beverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Beverages_Forms\Coffee.resx">
+      <DependentUpon>Coffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Beverages_Forms\MilkShake.resx">
+      <DependentUpon>MilkShake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Beverages_Forms\SoftDrinks.resx">
+      <DependentUpon>SoftDrinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Beverages_Forms\Tea.resx">
+      <DependentUpon>Tea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\BAHD_Burgers.resx">
+      <DependentUpon>BAHD_Burgers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\Burgers.resx">
+      <DependentUpon>Burgers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Cheese.resx">
+      <DependentUpon>Burger_Cheese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Chicken.resx">
+      <DependentUpon>Burger_Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Cheese.resx">
+      <DependentUpon>HotDog_Cheese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Fish.resx">
+      <DependentUpon>HotDog_Fish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\HotDog_Spicy.resx">
+      <DependentUpon>HotDog_Spicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\Burger_Fish.resx">
+      <DependentUpon>Burger_Fish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\BAHD_HotDogs.resx">
+      <DependentUpon>BAHD_HotDogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\HotDogs.resx">
+      <DependentUpon>HotDogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Desserts_Forms\Desserts.resx">
+      <DependentUpon>Desserts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Desserts_Forms\FruitSalad.resx">
+      <DependentUpon>FruitSalad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Desserts_Forms\IceCream.resx">
+      <DependentUpon>IceCream.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Desserts_Forms\Mouse.resx">
+      <DependentUpon>Mouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Desserts_Forms\Pudding.resx">
+      <DependentUpon>Pudding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Noodels_Forms\Noodels.resx">
+      <DependentUpon>Noodels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Noodels_Forms\Noodels_Cheese.resx">
+      <DependentUpon>Noodels_Cheese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Noodels_Forms\Noodels_Chicken.resx">
+      <DependentUpon>Noodels_Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Noodels_Forms\Noodels_Veg.resx">
+      <DependentUpon>Noodels_Veg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Noodels_Forms\Noodels_SeaFood.resx">
+      <DependentUpon>Noodels_SeaFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Macaronis.resx">
+      <DependentUpon>Macaronis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\PAM_Macaronis.resx">
+      <DependentUpon>PAM_Macaronis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_Cheese.resx">
+      <DependentUpon>Macaroni_Cheese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_Chicken.resx">
+      <DependentUpon>Macaroni_Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Macaroni_SeaFood.resx">
+      <DependentUpon>Macaroni_SeaFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\PAM_Pastas.resx">
+      <DependentUpon>PAM_Pastas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Pastas.resx">
+      <DependentUpon>Pastas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\PastasAndMacaronis.resx">
+      <DependentUpon>PastasAndMacaronis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_Cheese.resx">
+      <DependentUpon>Pasta_Cheese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_Chicken.resx">
+      <DependentUpon>Pasta_Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\PastasAndMacaronis_Forms\Pasta_SeaFood.resx">
+      <DependentUpon>Pasta_SeaFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Pizzas_Forms\Pizza_Cheese.resx">
+      <DependentUpon>Pizza_Cheese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Pizzas_Forms\Pizza_Chicken.resx">
+      <DependentUpon>Pizza_Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Pizzas_Forms\Pizza_Spicy.resx">
+      <DependentUpon>Pizza_Spicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Pizzas_Forms\Pizza_Veg.resx">
+      <DependentUpon>Pizza_Veg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Rices_Forms\Rices.resx">
+      <DependentUpon>Rices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Rices_Forms\Rice_Chicken.resx">
+      <DependentUpon>Rice_Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Rices_Forms\Rice_SeaFood.resx">
+      <DependentUpon>Rice_SeaFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Rices_Forms\Rice_Veg.resx">
+      <DependentUpon>Rice_Veg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount_Forms\CreateAnAccount.resx">
+      <DependentUpon>CreateAnAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount_Forms\MyLogedAccount.resx">
+      <DependentUpon>MyLogedAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount_Forms\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount_Forms\OTPSMS.resx">
+      <DependentUpon>OTPSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCart_Forms\AddToCart.resx">
+      <DependentUpon>AddToCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCart_Forms\AlreadyAdded.resx">
+      <DependentUpon>AlreadyAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCart_Forms\SelectToDelete.resx">
+      <DependentUpon>SelectToDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Appatizers_Salads.resx">
+      <DependentUpon>Appatizers_Salads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Appatizers_Soup.resx">
+      <DependentUpon>Appatizers_Soup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Appetizers_Forms\Appetizers.resx">
+      <DependentUpon>Appetizers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\BurgersandHotDogs_Forms\BurgersandHotDogs.resx">
+      <DependentUpon>BurgersandHotDogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meals_Forms\Pizzas_Forms\Pizzas.resx">
+      <DependentUpon>Pizzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
